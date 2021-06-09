@@ -86,8 +86,7 @@ def RGB2BGR(im):
 
 def main():
     args = parser.parse_args()
-    os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu).lstrip('[').rstrip(']')
-    print("torch.cuda.current_device()_{}".format(torch.cuda.current_device()))
+    
 
     # create model
     model = net.bninception(args.dim)
